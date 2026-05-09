@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Emille Hajala | Transplante Capilar FUE em Limeira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ebony: #1A1A1A;
+            --gold: #FCC81E;
+            --off-white: #F5F0E8;
+        }
+
+        body {
+            background-color: var(--ebony);
+            color: var(--off-white);
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-luxury {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        .border-gold {
+            border-color: var(--gold);
+        }
+
+        .text-off-white {
+            color: var(--off-white);
+        }
+
+        .btn-primary {
+            background-color: var(--off-white);
+            color: var(--ebony);
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold);
+            color: var(--ebony);
+            transform: translateY(-2px);
+        }
+
+        .btn-gold-filled {
+            background-color: var(--gold);
+            color: var(--ebony);
+            transition: all 0.3s ease;
+            font-weight: 700;
+        }
+
+        .section-dark {
+            background-color: #111111;
+        }
+
+        .section-ebony {
+            background-color: #1A1A1A;
+        }
+
+        .section-soft {
+            background-color: #222222;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.95));
+        }
+
+        .faq-accordion .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-accordion.active .content {
+            max-height: 500px;
+        }
+
+        .faq-accordion.active .icon {
+            transform: rotate(180deg);
+        }
+
+        input,
+        select,
+        textarea {
+            background-color: #222 !important;
+            border: 1px solid #333 !important;
+            color: var(--off-white) !important;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--gold) !important;
+            outline: none;
+        }
+
+        .nav-link {
+            color: var(--off-white);
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-[#1A1A1A]/95 border-b border-[#FCC81E]/20 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- LOGO AREA -->
+            <a href="#inicio" class="block">
+                <img src="Logo da Dra.png" class="h-12 md:h-16 w-auto">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center uppercase text-xs tracking-widest font-medium">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Dra. Emille Hajala</a>
+                <a href="#fue" class="nav-link">Técnica FUE</a>
+                <a href="#mmp" class="nav-link">MMP</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="https://instagram.com/draemillehajala" target="_blank"
+                    class="text-gold hover:text-white transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-gold"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-ebony border-b border-gold/20 p-6 flex flex-col space-y-4 text-center">
+            <a href="#inicio" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Início</a>
+            <a href="#sobre" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Dra. Emille Hajala</a>
+            <a href="#fue" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Técnica FUE</a>
+            <a href="#mmp" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">MMP</a>
+            <a href="#contato" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Contato</a>
+            <a href="#faq" class="nav-link"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">FAQ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070"
+                alt="Clínica Moderna" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl text-gold mb-6 leading-tight">
+                    Chega de soluções temporárias. O transplante capilar FUE é para a vida toda.
+                </h1>
+                <p class="text-off-white text-lg md:text-xl mb-10 font-light leading-relaxed">
+                    A técnica FUE permite cabelos curtos, recuperação tranquila e resultado imperceptível de
+                    transplante. Agende sua avaliação gratuita com a Dra. Emille em Limeira/SP.
+                </p>
+                <a href="https://wa.me/5519999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20com%20a%20Dra.%20Emille"
+                    class="btn-primary inline-block px-8 py-4 rounded-full text-lg shadow-xl uppercase tracking-wider">
+                    Agendar avaliação gratuita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social Section -->
+    <section class="py-16 section-ebony relative z-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center mb-8">
+                <div class="flex -space-x-3">
+                    <img class="w-12 h-12 rounded-full border-[3px] border-[#1A1A1A] object-cover"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Paciente">
+                    <img class="w-12 h-12 rounded-full border-[3px] border-[#1A1A1A] object-cover"
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Paciente">
+                    <img class="w-12 h-12 rounded-full border-[3px] border-[#1A1A1A] object-cover"
+                        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Paciente">
+                    <img class="w-12 h-12 rounded-full border-[3px] border-[#1A1A1A] object-cover"
+                        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Paciente">
+                </div>
+                <div class="relative flex items-center justify-center z-10 -ml-2">
+                    <i class="fas fa-certificate text-off-white text-3xl drop-shadow-md"></i>
+                    <i class="fas fa-check text-[#1A1A1A] text-sm absolute"></i>
+                </div>
+            </div>
+            <p class="text-off-white text-2xl md:text-4xl font-medium leading-[1.4] max-w-3xl mx-auto">
+                Resultados naturais: mais de<br>
+                3.000 pacientes com sua<br>
+                autoestima renovada.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dra. Emille Hajala Section -->
+    <section id="sobre" class="py-24 section-soft">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border border-gold/40 z-0 rounded-lg"></div>
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800"
+                        alt="Dra. Emille Hajala"
+                        class="relative z-10 rounded-lg shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-gold text-3xl md:text-5xl mb-2">Dra. Emille Hajala</h2>
+                    <p class="text-gold/80 font-medium mb-8 uppercase tracking-widest text-sm">CRM-SP 171.166</p>
+
+                    <div class="space-y-6 text-off-white/90 leading-relaxed font-light">
+                        <p>Formada em Medicina pela Universidade Municipal de Volta Redonda (UNIFOA), turma de 2014, a
+                            Dra. Emille construiu sua trajetória com propósito claro: dominar a arte de devolver o que a
+                            calvície tira das pessoas.</p>
+                        <p>Após a graduação, aprofundou sua base cirúrgica na Residência em Cirurgia Geral pelo Hospital
+                            Municipal do Campo Limpo, em São Paulo. Foi nesse período que descobriu sua verdadeira
+                            vocação: o transplante capilar.</p>
+                        <p>Especializou-se em Tricologia e Cirurgia Capilar pelo Instituto Brasileiro de Ensino e desde
+                            então nunca parou de se aperfeiçoar participando de cursos, congressos e workshops nacionais
+                            com foco contínuo no refinamento da técnica FUE.</p>
+                        <p class="italic text-gold pt-4">Hoje, cada procedimento realizado é mais do que uma cirurgia. É
+                            a certeza de ter feito a escolha certa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Técnica FUE Section -->
+    <section id="fue" class="py-24 section-ebony">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-gold text-3xl md:text-5xl mb-6">O que acontece no dia do seu transplante capilar</h2>
+                <div class="w-24 h-1 bg-gold mx-auto opacity-40"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-8 text-off-white/90 font-light">
+                    <p>A <span class="text-gold font-medium">FUE (Follicular Unit Extraction)</span> é um procedimento
+                        minimamente invasivo que transformou a forma como o transplante capilar é feito. Sem cortes. Sem
+                        cicatriz linear. Sem a aparência artificial que muita gente teme.</p>
+                    <p>O processo começa na área doadora, geralmente a região da nuca, onde os folículos são extraídos
+                        individualmente com um instrumento chamado punch. Essa etapa é feita com precisão milimétrica,
+                        pois cada folículo precisa sair completamente intacto para garantir o crescimento dos fios após
+                        o transplante.</p>
+                    <p>Depois da extração, ficam apenas pequenas marcas semelhantes a furos de agulha, que somem
+                        sozinhas em 3 a 7 dias. Nada visível. Nada permanente.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-lg border-l-4 border-gold">
+                    <p class="text-off-white/90 font-light mb-6">Em seguida começa a etapa mais delicada: o reimplante.
+                        Cada raiz é posicionada individualmente, respeitando a angulação, a orientação e a densidade
+                        natural do seu cabelo. É esse cuidado que faz o resultado parecer que o cabelo sempre esteve
+                        ali.</p>
+                    <p class="text-off-white/90 font-light">Quanto menos o folículo é manipulado durante todo o
+                        processo, melhor o crescimento e mais previsível o resultado. Por isso a técnica FUE exige uma
+                        cirurgiã com treino, atenção e comprometimento com cada detalhe.</p>
+                </div>
+            </div>
+
+            <!-- Pós-operatório Subsection -->
+            <div class="mt-24 bg-[#111] rounded-2xl p-10 border border-gold/10">
+                <div class="text-center mb-12">
+                    <h3 class="text-gold text-2xl md:text-4xl mb-4">Pós-operatório</h3>
+                    <p class="text-off-white uppercase tracking-widest text-sm">Recuperação simples. Resultado para a
+                        vida toda.</p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center p-6 border border-gold/5 rounded-lg hover:border-gold/30 transition">
+                        <div class="text-gold text-3xl font-luxury mb-4">01</div>
+                        <h4 class="text-off-white font-semibold mb-3">Primeiras 24h</h4>
+                        <p class="text-off-white/70 text-sm">Orientações detalhadas, compressas frias e posição
+                            semi-sentada para proteger os folículos.</p>
+                    </div>
+                    <div class="text-center p-6 border border-gold/5 rounded-lg hover:border-gold/30 transition">
+                        <div class="text-gold text-3xl font-luxury mb-4">02</div>
+                        <h4 class="text-off-white font-semibold mb-3">Primeiros 3 dias</h4>
+                        <p class="text-off-white/70 text-sm">Hidratação horária com soro fisiológico e medicação
+                            preventiva. Repouso leve.</p>
+                    </div>
+                    <div class="text-center p-6 border border-gold/5 rounded-lg hover:border-gold/30 transition">
+                        <div class="text-gold text-3xl font-luxury mb-4">03</div>
+                        <h4 class="text-off-white font-semibold mb-3">10 a 12 dias</h4>
+                        <p class="text-off-white/70 text-sm">Queda natural das crostas. Cicatrização em estágio avançado
+                            sem coceira excessiva.</p>
+                    </div>
+                    <div class="text-center p-6 border border-gold/5 rounded-lg hover:border-gold/30 transition">
+                        <div class="text-gold text-3xl font-luxury mb-4">04</div>
+                        <h4 class="text-off-white font-semibold mb-3">3 a 4 semanas</h4>
+                        <p class="text-off-white/70 text-sm">Fios temporários caem, dando lugar ao crescimento de fios
+                            novos, fortes e permanentes.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12 text-off-white/80 italic font-light">
+                    O resultado definitivo se constrói com paciência e com os cuidados certos. A Dra. Emille acompanha
+                    cada etapa desse processo.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MMP Section -->
+    <section id="mmp" class="py-24 section-soft">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-gold text-3xl md:text-5xl mb-8 leading-tight">Seu cabelo está pedindo socorro. O MMP
+                        pode ser a resposta.</h2>
+                    <div class="space-y-6 text-off-white/90 font-light leading-relaxed">
+                        <p>Antes de chegar à calvície avançada, o cabelo avisa. Os fios ficam mais finos. O crescimento
+                            fica mais lento. A queda diária aumenta. São sinais que o folículo está em sofrimento e que,
+                            sem intervenção, o processo vai continuar.</p>
+                        <p><span class="text-gold font-semibold uppercase tracking-wider">É exatamente nesse momento que
+                                o MMP Capilar faz a diferença.</span></p>
+                        <p>O <span class="text-gold font-medium">MMP (Microinfusão de Medicamentos na Pele)</span> é um
+                            tratamento clínico que aplica uma combinação precisa de ativos diretamente no couro
+                            cabeludo, usando microagulhas de alta precisão.</p>
+                        <p>O resultado é o fortalecimento dos fios existentes, o estímulo ao crescimento de novos
+                            cabelos e a melhora progressiva do volume e da densidade capilar. E tudo isso sem cirurgia.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-1 gap-6">
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl border border-gold/10">
+                        <h4 class="text-gold text-xl font-luxury mb-4">Por que a queda acontece?</h4>
+                        <p class="text-off-white/80 font-light text-sm">A causa mais comum é a Alopecia Androgenética,
+                            onde o hormônio DHT bloqueia a passagem de nutrientes. O MMP age nutrindo e reativando
+                            folículos que ainda têm capacidade de produzir fios.</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl border border-gold/10">
+                        <h4 class="text-gold text-xl font-luxury mb-4">Público Alvo</h4>
+                        <p class="text-off-white/80 font-light text-sm">Homens entre 25-40 anos e mulheres no período
+                            pré/pós menopausa são os que mais se beneficiam quando o tratamento é iniciado cedo.</p>
+                    </div>
+                    <div class="bg-gold p-8 rounded-xl text-ebony">
+                        <p class="font-bold mb-2 uppercase text-xs">Ação imediata</p>
+                        <p class="text-lg">Se você está notando os primeiros sinais, esse é o momento de agir. A Dra.
+                            Emille avalia cada caso individualmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-24 section-ebony">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-gold text-3xl md:text-5xl mb-4">Sua avaliação começa aqui.</h2>
+                    <p class="text-off-white font-light">Preencha os dados abaixo e nossa equipe entrará em contato em
+                        até 24 horas.</p>
+                </div>
+
+                <form
+                    class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#111] p-8 md:p-12 rounded-2xl border border-gold/10 shadow-2xl">
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">Nome completo</label>
+                        <input type="text" placeholder="Como gostaria de ser chamado?"
+                            class="w-full p-3 rounded-lg border">
+                    </div>
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">WhatsApp com DDD</label>
+                        <input type="tel" placeholder="(00) 00000-0000" class="w-full p-3 rounded-lg border">
+                    </div>
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">Prefere ser contactado por:</label>
+                        <div class="flex space-x-6 mt-3">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="contact_pref" class="form-radio text-gold">
+                                <span class="text-off-white text-sm">Mensagem</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="contact_pref" class="form-radio text-gold">
+                                <span class="text-off-white text-sm">Ligação</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">E-mail</label>
+                        <input type="email" placeholder="seu@email.com" class="w-full p-3 rounded-lg border">
+                    </div>
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">Sexo</label>
+                        <div class="flex space-x-6 mt-3">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="gender" class="form-radio text-gold">
+                                <span class="text-off-white text-sm">Masculino</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="gender" class="form-radio text-gold">
+                                <span class="text-off-white text-sm">Feminino</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-1">
+                        <label class="block text-gold text-sm font-semibold mb-2">Faixa etária</label>
+                        <select class="w-full p-3 rounded-lg border appearance-none">
+                            <option>18 a 30 anos</option>
+                            <option>31 a 45 anos</option>
+                            <option>46 a 60 anos</option>
+                            <option>Acima de 60</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gold text-sm font-semibold mb-2">Qual é o seu maior incômodo
+                            hoje?</label>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <label class="flex items-center space-x-2 text-xs">
+                                <input type="checkbox" class="text-gold"> <span>Volume e densidade reduzidos</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-xs">
+                                <input type="checkbox" class="text-gold"> <span>Calvície visível frontal/topo</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-xs">
+                                <input type="checkbox" class="text-gold"> <span>Queda intensa e progressiva</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-xs">
+                                <input type="checkbox" class="text-gold"> <span>Fios finos e sem força</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-xs">
+                                <input type="checkbox" class="text-gold"> <span>Resultado insatisfatório anterior</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gold text-sm font-semibold mb-2">Mensagem (opcional)</label>
+                        <textarea rows="4" placeholder="Descreva brevemente seu histórico capilar..."
+                            class="w-full p-3 rounded-lg border"></textarea>
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button type="submit"
+                            class="btn-primary w-full py-4 rounded-full text-lg uppercase tracking-widest">
+                            Agendar minha avaliação gratuita
+                        </button>
+                        <p class="text-center text-[10px] text-off-white/40 mt-4 uppercase tracking-tighter">
+                            Sigilo absoluto. Suas informações são utilizadas exclusivamente para contato da clínica da
+                            Dra. Emille.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 section-soft">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-gold text-3xl md:text-5xl mb-4">Tudo o que você precisa saber antes de agendar sua
+                    avaliação</h2>
+                <p class="text-off-white/60 font-light">Dúvidas frequentes sobre procedimentos, resultados e técnicas.
+                </p>
+            </div>
+
+            <!-- FAQ Groups -->
+            <div class="space-y-12">
+                <!-- Group 1: Procedimento -->
+                <div>
+                    <h3 class="text-gold text-xl font-bold mb-6 border-b border-gold/20 pb-2">Sobre o Procedimento</h3>
+                    <div class="space-y-4">
+                        <div class="faq-accordion active bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>O transplante capilar FUE é um procedimento doloroso?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                Não. O procedimento é realizado com anestesia local, o que garante total conforto
+                                durante a cirurgia. O paciente pode sentir um leve desconforto na aplicação da
+                                anestesia, mas após esse momento não sente dor. No pós-operatório imediato, analgésicos
+                                são prescritos para os primeiros dias e o desconforto é mínimo e passageiro.
+                            </div>
+                        </div>
+                        <div class="faq-accordion bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>Quanto tempo dura a cirurgia?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                A duração varia de acordo com o número de folículos a serem transplantados e as
+                                características de cada caso. Esse tempo é definido na avaliação individual com a Dra.
+                                Emille, onde o planejamento cirúrgico é feito com base na sua necessidade específica.
+                            </div>
+                        </div>
+                        <div class="faq-accordion bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>O resultado fica com aparência natural?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                Sim. Um dos principais objetivos da técnica FUE é justamente o resultado imperceptível.
+                                Cada folículo é implantado respeitando a angulação, a orientação e a densidade natural
+                                do seu cabelo. O resultado é indistinguível do cabelo original.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: Técnica FUE -->
+                <div>
+                    <h3 class="text-gold text-xl font-bold mb-6 border-b border-gold/20 pb-2">Sobre a Técnica FUE</h3>
+                    <div class="space-y-4">
+                        <div class="faq-accordion bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>Qual a diferença entre a FUE e a técnica FUT?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                A FUT (Follicular Unit Transplantation) é a técnica mais antiga e envolve a retirada de
+                                uma faixa de couro cabeludo da área doadora, deixando uma cicatriz linear permanente. A
+                                FUE extrai os folículos individualmente, sem corte linear, deixando apenas
+                                microperfurações que somem em poucos dias.
+                            </div>
+                        </div>
+                        <div class="faq-accordion bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>Os fios transplantados realmente duram para sempre?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                Sim. Os folículos utilizados no transplante são retirados de regiões geneticamente
+                                resistentes à calvície, geralmente a nuca. Por preservarem essa característica genética
+                                após o transplante, os fios crescem de forma permanente na nova região, durando décadas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: MMP -->
+                <div>
+                    <h3 class="text-gold text-xl font-bold mb-6 border-b border-gold/20 pb-2">Sobre o MMP Capilar</h3>
+                    <div class="space-y-4">
+                        <div class="faq-accordion bg-ebony border border-gold/10 rounded-lg">
+                            <button class="w-full flex justify-between items-center p-5 text-left text-gold font-medium"
+                                onclick="toggleFaq(this)">
+                                <span>O MMP substitui o transplante capilar?</span>
+                                <i class="fas fa-chevron-down icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="content px-5 pb-5 text-off-white/80 font-light text-sm">
+                                Não. O MMP e o transplante capilar são tratamentos complementares com objetivos
+                                diferentes. O MMP fortalece os fios existentes, estimula o crescimento e retarda a
+                                progressão da calvície. Em muitos casos, os dois tratamentos são combinados para um
+                                resultado mais completo.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Final no FAQ -->
+            <div
+                class="mt-16 text-center bg-gradient-to-br from-[#1a1a1a] to-[#1F1A0E] p-12 rounded-2xl border border-gold/30">
+                <h3 class="text-gold text-2xl mb-4">Ainda tem dúvidas?</h3>
+                <p class="text-off-white/80 mb-8">Fale diretamente com nossa equipe pelo WhatsApp. Estamos aqui para
+                    responder qualquer pergunta antes da sua avaliação.</p>
+                <a href="https://wa.me/5519999999999"
+                    class="btn-gold-filled inline-block px-10 py-4 rounded-full text-lg uppercase shadow-2xl">
+                    Falar no WhatsApp agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-[#0a0a0a] border-t border-gold/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1">
+                    <div class="mb-6">
+                        <img src="Logo - Dra. - Sem fundo.png" alt="Logo Dra. Emille Hajala" class="h-16 w-auto">
+                    </div>
+                    <p class="text-off-white/50 text-sm mb-2">Transplante Capilar FUE</p>
+                    <p class="text-gold text-xs font-semibold">CRM-SP 171.166</p>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-gold text-sm font-bold mb-6 uppercase tracking-widest">Localização</h4>
+                    <p class="text-off-white/70 text-sm">Limeira, São Paulo</p>
+                    <p class="text-off-white/50 text-xs mt-2">Atendemos Limeira, Campinas, Rio Claro, Piracicaba e
+                        região.</p>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-gold text-sm font-bold mb-6 uppercase tracking-widest">Navegação</h4>
+                    <ul class="space-y-3 text-off-white/70 text-sm">
+                        <li><a href="#inicio" class="hover:text-gold">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-gold">Sobre a Dra. Emille</a></li>
+                        <li><a href="#fue" class="hover:text-gold">Técnica FUE</a></li>
+                        <li><a href="#mmp" class="hover:text-gold">MMP</a></li>
+                        <li><a href="#contato" class="hover:text-gold">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1">
+                    <h4 class="text-gold text-sm font-bold mb-6 uppercase tracking-widest">Atendimento</h4>
+                    <p class="text-off-white/70 text-sm mb-4">Segunda a Sexta, das 8h às 18h</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gold hover:text-off-white transition"><i
+                                class="fab fa-whatsapp text-xl"></i></a>
+                        <a href="#" class="text-gold hover:text-off-white transition"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gold hover:text-off-white transition"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gold/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-off-white/30 text-center md:text-left gap-4">
+                <p>© 2025 Dra. Emille Hajala. Todos os direitos reservados. <a href="#"
+                        class="hover:text-gold ml-2">Política de Privacidade</a></p>
+                <p class="max-w-md">Este site tem caráter exclusivamente informativo e não substitui a consulta médica
+                    presencial.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const accordion = button.parentElement;
+            const isActive = accordion.classList.contains('active');
+
+            if (!isActive) {
+                accordion.classList.add('active');
+            } else {
+                accordion.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
