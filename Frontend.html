@@ -4,55 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Emille Hajala | Transplante Capilar FUE</title>
+    <meta name="description"
+        content="Dra. Emille Hajala — Especialista em Transplante Capilar FUE em Limeira, SP. Mais de 3.000 pacientes transformados. Agende sua avaliação.">
+    <title>Dra. Emille Hajala | Transplante Capilar FUE em Limeira</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
+        :root {
+            --bg-base: #0D0D0F;
+            --bg-elevated: #161618;
+            --bg-card: #1A1A1D;
+            --bg-alt: #121214;
+            --gold: #C9A84C;
+            --gold-soft: rgba(201, 168, 76, 0.10);
+            --gold-glow: rgba(201, 168, 76, 0.25);
+            --text-primary: #EAEBED;
+            --text-muted: #8A8D93;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-            background-color: #0A0A0B;
-            color: #F3F4F6;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
         }
 
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Color Utility Classes --- */
         .bg-base {
-            background-color: #0A0A0B;
+            background-color: var(--bg-base);
         }
 
         .bg-secondary {
-            background-color: #1C1C1E;
+            background-color: var(--bg-elevated);
         }
 
-        .text-secondary {
-            color: #1C1C1E;
-        }
-
-        .border-secondary {
-            border-color: #1C1C1E;
-        }
-
-        .bg-highlight {
-            background-color: #D4AF37;
+        .bg-card {
+            background-color: var(--bg-card);
         }
 
         .text-highlight {
-            color: #D4AF37;
+            color: var(--gold);
+        }
+
+        .bg-highlight {
+            background-color: var(--gold);
         }
 
         .border-highlight {
-            border-color: #D4AF37;
+            border-color: var(--gold);
         }
 
         .hover-highlight:hover {
-            background-color: #c5a02e;
+            background-color: #b8952e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.2);
         }
 
+        /* --- Navbar --- */
+        nav.nav-scrolled {
+            background-color: rgba(13, 13, 15, 0.85) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom-color: rgba(201, 168, 76, 0.15) !important;
+        }
+
+        /* --- FAQ --- */
         .faq-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .faq-item.active .faq-content {
@@ -63,41 +95,152 @@
             transform: rotate(180deg);
         }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
+        .faq-item {
+            transition: border-color 0.3s ease;
         }
 
-        /* Ajuste de inputs conforme solicitado: Linhas em branco */
+        .faq-item:hover {
+            border-color: rgba(201, 168, 76, 0.2) !important;
+        }
+
+        /* --- WhatsApp Float --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            animation: wa-pulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes wa-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 14px rgba(34, 197, 94, 0);
+            }
+        }
+
+        /* --- Inputs --- */
         input,
         select,
         textarea {
-            background-color: transparent !important;
-            border: 1px solid #FFFFFF !important;
-            /* Linhas em branco */
-            color: #fff !important;
+            background-color: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            color: var(--text-primary) !important;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        option {
+            background-color: var(--bg-elevated) !important;
+            color: var(--text-primary) !important;
         }
 
         input:focus,
         select:focus,
         textarea:focus {
-            border-color: #D4AF37 !important;
-            /* Destaque dourado no foco */
-            box-shadow: none !important;
+            border-color: var(--gold) !important;
+            box-shadow: 0 0 0 3px var(--gold-soft) !important;
             outline: none !important;
         }
 
         input::placeholder,
         textarea::placeholder {
-            color: #999 !important;
+            color: var(--text-muted) !important;
         }
 
-        /* Ajuste para botões de rádio (bullets) */
         input[type="radio"] {
-            border-color: #FFFFFF !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
             background-color: transparent !important;
+        }
+
+        /* --- Card Hover --- */
+        .card-hover {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(201, 168, 76, 0.08);
+            border-color: rgba(201, 168, 76, 0.2) !important;
+        }
+
+        /* --- CTA Buttons --- */
+        .btn-cta {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 32px rgba(201, 168, 76, 0.3);
+        }
+
+        .btn-cta:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        /* --- Section Divider --- */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-glow), transparent);
+        }
+
+        /* --- Scroll Reveal --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        /* --- Gold gradient text for step numbers --- */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, var(--gold), #E8D48B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* --- Accessibility --- */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .whatsapp-float {
+                animation: none;
+            }
+
+            .card-hover,
+            .btn-cta,
+            .faq-item,
+            .hover-highlight:hover {
+                transition: none;
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -116,54 +259,72 @@
     </a>
 
     <!-- Navbar -->
-    <nav class="bg-base border-b border-white/5 shadow-sm sticky top-0 z-50">
+    <nav id="main-nav" class="bg-base border-b border-white/5 sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-bold text-highlight text-xl">Dra. Emille Hajala</div>
-            <div class="hidden lg:flex space-x-6 items-center">
-                <a href="#inicio" class="hover:text-highlight transition font-medium">Início</a>
-                <a href="#fue" class="hover:text-highlight transition font-medium">Técnica FUE</a>
-                <a href="#sobre" class="hover:text-highlight transition font-medium">Sobre</a>
-                <a href="#mmp" class="hover:text-highlight transition font-medium">MMP</a>
-                <a href="#contato" class="hover:text-highlight transition font-medium">Contato</a>
-                <a href="#faq" class="hover:text-highlight transition font-medium">FAQ</a>
+            <a href="#inicio" class="font-display font-bold text-highlight text-xl tracking-wide">Dra. Emille Hajala</a>
+            <div class="hidden lg:flex space-x-8 items-center text-sm">
+                <a href="#inicio" class="hover:text-[#C9A84C] transition font-medium tracking-wide">Início</a>
+                <a href="#fue" class="hover:text-[#C9A84C] transition font-medium tracking-wide">Técnica FUE</a>
+                <a href="#sobre" class="hover:text-[#C9A84C] transition font-medium tracking-wide">Sobre</a>
+                <a href="#mmp" class="hover:text-[#C9A84C] transition font-medium tracking-wide">MMP</a>
+                <a href="#contato" class="hover:text-[#C9A84C] transition font-medium tracking-wide">Contato</a>
+                <a href="#faq" class="hover:text-[#C9A84C] transition font-medium tracking-wide">FAQ</a>
             </div>
             <a href="#contato"
-                class="bg-highlight text-white px-5 py-2 rounded-full font-semibold hover-highlight transition text-sm">Agendar
+                class="bg-highlight text-black px-6 py-2.5 rounded-full font-semibold btn-cta text-sm">Agendar
                 Avaliação</a>
         </div>
     </nav>
 
     <!-- 1. Hero Section -->
-    <section class="relative bg-base pt-16 pb-24 md:pt-24 overflow-hidden">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0 z-10">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-100 leading-tight mb-4">
-                    Especialista em Técnica FUE <br>
-                    <span class="text-highlight">Dra. Emille Hajala</span>
-                </h1>
-                <p class="text-xl text-gray-400 mb-8 font-medium">
-                    Mais de 3.000 pacientes transformados. Recupere sua autoestima com naturalidade e segurança.
+    <section class="relative bg-base pt-20 pb-28 md:pt-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[rgba(201,168,76,0.03)]">
+        </div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-12 md:mb-0 reveal">
+                <p class="text-highlight font-semibold tracking-[0.2em] uppercase text-xs mb-4">Transplante Capilar FUE
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#"
-                        class="bg-highlight text-white px-8 py-4 rounded-lg font-bold text-lg text-center hover-highlight shadow-lg transition">
-                        Agendar avaliação no WhatsApp
-                    </a>
+                <h1 class="text-4xl md:text-[3.4rem] font-bold leading-[1.15] mb-6">
+                    Recupere sua confiança com <span class="text-highlight">naturalidade</span>
+                </h1>
+                <p class="text-lg text-[--text-muted] mb-10 max-w-lg leading-relaxed font-light">
+                    Mais de 3.000 pacientes transformados. Técnica minimamente invasiva com resultados permanentes e
+                    imperceptíveis.
+                </p>
+                <a href="#contato"
+                    class="inline-block bg-highlight text-black px-10 py-4 rounded-xl font-bold text-lg btn-cta shadow-lg">
+                    Agendar avaliação gratuita
+                </a>
+                <!-- Stats -->
+                <div class="flex gap-10 mt-12 pt-8 border-t border-white/5">
+                    <div class="reveal reveal-delay-1">
+                        <p class="text-3xl font-bold text-highlight font-display">3.000+</p>
+                        <p class="text-xs text-[--text-muted] mt-1 tracking-wide">Pacientes</p>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <p class="text-3xl font-bold text-highlight font-display">98%</p>
+                        <p class="text-xs text-[--text-muted] mt-1 tracking-wide">Satisfação</p>
+                    </div>
+                    <div class="reveal reveal-delay-3">
+                        <p class="text-3xl font-bold text-highlight font-display">7 anos</p>
+                        <p class="text-xs text-[--text-muted] mt-1 tracking-wide">De experiência</p>
+                    </div>
                 </div>
             </div>
-            <div class="md:w-1/2 relative">
-                <div class="bg-highlight absolute -right-20 -bottom-20 w-[120%] h-[120%] rounded-full opacity-5"></div>
+            <div class="md:w-1/2 relative reveal reveal-delay-2">
+                <div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-highlight/5 blur-3xl"></div>
                 <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1000&auto=format&fit=crop"
                     alt="Foto da Dra. Emille Hajala"
-                    class="rounded-2xl shadow-2xl relative z-10 w-full max-w-md mx-auto object-cover border-4 border-secondary">
+                    class="rounded-2xl shadow-2xl relative z-10 w-full max-w-md mx-auto object-cover border border-white/10">
             </div>
         </div>
     </section>
+    <div class="section-divider"></div>
 
     <!-- 2. "O que a calvície rouba de você" -->
-    <section class="py-20 bg-[#141416]">
+    <section class="py-24 bg-[#121214]">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-100 text-center mb-12">O que a calvície rouba de você
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">O que a calvície rouba de você
                 todos os dias</h2>
             <div class="prose prose-lg text-gray-300 mx-auto space-y-6">
                 <p>O espelho não mente, mas ele pode ser cruel. Você acorda, vai ao banheiro e, antes mesmo de lavar o
@@ -191,7 +352,8 @@
                     </li>
                 </ul>
 
-                <p class="bg-secondary p-6 border-l-4 border-highlight shadow-sm italic text-gray-200">
+                <p
+                    class="bg-secondary p-8 rounded-xl border-l-4 border-highlight shadow-sm italic text-gray-200 reveal">
                     A sensação de perda vai além dos fios. A calvície é silenciosa, mas o barulho que ela faz na sua
                     autoestima é ensurdecedor. Cada fio que cai no ralo do chuveiro parece levar embora um pouco da sua
                     confiança e da sua identidade.
@@ -202,13 +364,14 @@
             </div>
         </div>
     </section>
+    <div class="section-divider"></div>
 
     <!-- 3. Técnica FUE (EXPANDIDA) -->
-    <section id="fue" class="py-20 bg-base">
+    <section id="fue" class="py-24 bg-base">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-100 mb-4">Técnica FUE</h2>
-                <p class="text-gray-400 max-w-3xl mx-auto text-lg italic">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Técnica FUE</h2>
+                <p class="text-[--text-muted] max-w-3xl mx-auto text-lg italic">
                     "A resposta para a calvície só virá quando você decidir agir. A medicina evoluiu para devolver sua
                     imagem sem traumas."
                 </p>
@@ -216,19 +379,24 @@
 
             <!-- Vantagens da FUE -->
             <div class="grid md:grid-cols-3 gap-8 mb-20">
-                <div class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight shadow-sm">
-                    <h3 class="font-bold text-highlight text-xl mb-4">Naturalidade Absoluta</h3>
-                    <p class="text-gray-300">Esqueça o "cabelo de boneco". A FUE permite um design artístico,
+                <div
+                    class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight card-hover border border-white/5 reveal reveal-delay-1">
+                    <h3 class="font-bold text-highlight text-xl mb-4 font-display">Naturalidade Absoluta</h3>
+                    <p class="text-[--text-muted]">Esqueça o "cabelo de boneco". A FUE permite um design artístico,
                         respeitando a angulação e densidade exata dos seus fios originais.</p>
                 </div>
-                <div class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight shadow-sm">
-                    <h3 class="font-bold text-highlight text-xl mb-4">Sem Cicatriz Linear</h3>
-                    <p class="text-gray-300">Diferente de técnicas antigas, não há cortes com bisturi. Você poderá usar
+                <div
+                    class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight card-hover border border-white/5 reveal reveal-delay-2">
+                    <h3 class="font-bold text-highlight text-xl mb-4 font-display">Sem Cicatriz Linear</h3>
+                    <p class="text-[--text-muted]">Diferente de técnicas antigas, não há cortes com bisturi. Você poderá
+                        usar
                         o cabelo raspado ou bem curto sem marcas visíveis.</p>
                 </div>
-                <div class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight shadow-sm">
-                    <h3 class="font-bold text-highlight text-xl mb-4">Procedimento Indolor</h3>
-                    <p class="text-gray-300">Realizado com anestesia local avançada. A recuperação é tão tranquila que a
+                <div
+                    class="bg-secondary p-8 rounded-2xl border-t-4 border-highlight card-hover border border-white/5 reveal reveal-delay-3">
+                    <h3 class="font-bold text-highlight text-xl mb-4 font-display">Procedimento Indolor</h3>
+                    <p class="text-[--text-muted]">Realizado com anestesia local avançada. A recuperação é tão tranquila
+                        que a
                         maioria dos pacientes não precisa de analgésicos fortes.</p>
                 </div>
             </div>
@@ -240,7 +408,7 @@
                         <h3 class="text-3xl font-bold mb-8 text-highlight">Como funciona o procedimento?</h3>
                         <div class="space-y-8">
                             <div class="flex gap-4">
-                                <div class="font-bold text-3xl text-white/10">01</div>
+                                <div class="font-bold text-3xl text-gold-gradient">01</div>
                                 <div>
                                     <h4 class="font-bold text-xl mb-2">Extração Individualizada</h4>
                                     <p class="text-white/70">Usamos instrumentos milimétricos (micro-punches) para
@@ -248,7 +416,7 @@
                                 </div>
                             </div>
                             <div class="flex gap-4">
-                                <div class="font-bold text-3xl text-white/10">02</div>
+                                <div class="font-bold text-3xl text-gold-gradient">02</div>
                                 <div>
                                     <h4 class="font-bold text-xl mb-2">Preparação e Conservação</h4>
                                     <p class="text-white/70">Os folículos são mantidos em soluções nutritivas especiais
@@ -256,7 +424,7 @@
                                 </div>
                             </div>
                             <div class="flex gap-4">
-                                <div class="font-bold text-3xl text-white/10">03</div>
+                                <div class="font-bold text-3xl text-gold-gradient">03</div>
                                 <div>
                                     <h4 class="font-bold text-xl mb-2">Reimplante com Arte</h4>
                                     <p class="text-white/70">A Dra. Emille cria os canais de recepção seguindo o fluxo
@@ -327,13 +495,15 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <!-- 3. Prova social -->
-    <section class="py-20 bg-secondary text-white overflow-hidden">
+    <section class="py-24 bg-secondary text-white overflow-hidden">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Pacientes que confiaram na Dra. Emille</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal">Pacientes que confiaram na Dra. Emille
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-base/40 p-4 rounded-xl border border-white/5">
+                <div class="bg-base/40 p-4 rounded-xl border border-white/5 card-hover reveal reveal-delay-1">
                     <div class="flex gap-2 mb-4">
                         <div
                             class="w-1/2 h-64 bg-gray-800 rounded-lg flex items-center justify-center text-sm font-bold text-gray-500">
@@ -344,7 +514,7 @@
                     </div>
                     <p class="text-center text-white/60 text-sm">Paciente de 34 anos - 2.500 folículos</p>
                 </div>
-                <div class="bg-base/40 p-4 rounded-xl border border-white/5">
+                <div class="bg-base/40 p-4 rounded-xl border border-white/5 card-hover reveal reveal-delay-2">
                     <div class="flex gap-2 mb-4">
                         <div
                             class="w-1/2 h-64 bg-gray-800 rounded-lg flex items-center justify-center text-sm font-bold text-gray-500">
@@ -355,7 +525,7 @@
                     </div>
                     <p class="text-center text-white/60 text-sm">Paciente de 42 anos - Reconstrução de linha frontal</p>
                 </div>
-                <div class="bg-base/40 p-4 rounded-xl border border-white/5">
+                <div class="bg-base/40 p-4 rounded-xl border border-white/5 card-hover reveal reveal-delay-3">
                     <div class="flex gap-2 mb-4">
                         <div
                             class="w-1/2 h-64 bg-gray-800 rounded-lg flex items-center justify-center text-sm font-bold text-gray-500">
@@ -371,25 +541,26 @@
             <div class="text-center max-w-2xl mx-auto">
                 <p class="text-xl mb-8">Faça parte dos que tiveram a autoestima renovada, descubra como podemos te
                     ajudar nesse caminho.</p>
-                <a href="#"
-                    class="inline-block bg-highlight text-white px-10 py-4 rounded-lg font-bold text-lg hover-highlight transition shadow-2xl">
+                <a href="#contato"
+                    class="inline-block bg-highlight text-black px-10 py-4 rounded-xl font-bold text-lg btn-cta shadow-2xl">
                     Renovar a minha autoestima
                 </a>
             </div>
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <!-- 4. Sobre a Dra. Emille Hajala -->
-    <section id="sobre" class="py-20 bg-base">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+    <section id="sobre" class="py-24 bg-base">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
             <div class="md:w-1/3">
                 <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop"
                     alt="Foto da Dra. Emille Hajala"
-                    class="rounded-3xl shadow-xl w-full aspect-square object-cover grayscale-[20%] border border-white/5">
+                    class="rounded-3xl shadow-xl w-full aspect-square object-cover grayscale-[20%] border border-white/10">
             </div>
-            <div class="md:w-2/3">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-2">Dra. Emille Hajala</h2>
-                <p class="text-highlight font-bold mb-6">CRM-SP 171.166</p>
+            <div class="md:w-2/3 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Dra. Emille Hajala</h2>
+                <p class="text-highlight font-semibold mb-6 tracking-wide text-sm">CRM-SP 171.166</p>
                 <div class="prose prose-lg text-gray-400 space-y-4">
                     <p>Formada em Medicina pela Universidade Municipal de Volta Redonda (UNIFOA), a Dra. Emille
                         construiu sua trajetória com um propósito claro: dominar a arte de devolver o que a calvície
@@ -407,44 +578,95 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <!-- 5. MMP Capilar -->
-    <section id="mmp" class="py-20 bg-[#141416]">
+    <section id="mmp" class="py-24 bg-[#121214]">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal">
                     <span class="text-highlight font-bold tracking-widest uppercase text-sm">Tratamento Clínico</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mt-2">MMP Capilar: A Alternativa
-                        Complementar</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">O "adubo" direto na raiz: conheça o MMP Capilar</h2>
                 </div>
 
-                <div class="bg-secondary p-8 md:p-12 rounded-3xl shadow-xl border border-white/5">
-                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Seu cabelo está pedindo socorro. O MMP pode ser a resposta. Antes de chegar à calvície avançada,
-                        o folículo entra em sofrimento e a queda diária aumenta.
-                    </p>
+                <div class="bg-secondary p-8 md:p-12 rounded-3xl shadow-xl border border-white/5 reveal reveal-delay-1">
+                    <div class="prose prose-lg text-gray-300 max-w-none space-y-6 mb-10">
+                        <p class="text-xl text-white font-medium leading-relaxed">
+                            Seu cabelo está pedindo socorro e o MMP pode ser a resposta definitiva para interromper a
+                            queda antes que seja tarde demais.
+                        </p>
+                        <p>
+                            Antes de a calvície se tornar avançada, o seu corpo envia sinais claros. Os fios ficam mais
+                            finos, o crescimento parece estagnado e o couro cabeludo começa a aparecer sob a luz. Isso
+                            acontece porque o folículo está em sofrimento. Sem ajuda, ele vai simplesmente parar de
+                            produzir cabelo.
+                        </p>
+                    </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-base/40 p-6 rounded-2xl border border-white/5">
-                            <h3 class="font-bold text-highlight mb-4 text-lg">O que é o MMP?</h3>
-                            <p class="text-gray-400">Microinfusão de Medicamentos na Pele. Aplica ativos diretamente no
-                                couro cabeludo (1mm de profundidade) para nutrir os folículos que estão enfraquecendo.
-                            </p>
+                    <h3 class="text-2xl font-bold text-highlight mb-6 font-display">O que é o MMP e como ele funciona?
+                    </h3>
+                    <p class="text-gray-300 mb-6">A sigla significa Microinfusão de Medicamentos na Pele. Imagine que,
+                        em vez de tomar uma vitamina e esperar que ela viaje por todo o seu corpo, nós entregamos o
+                        "alimento" exatamente onde ele é necessário.</p>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-12">
+                        <div class="bg-base/40 p-6 rounded-2xl border border-white/5 card-hover">
+                            <h4 class="font-bold text-white mb-2">A aplicação</h4>
+                            <p class="text-[--text-muted] text-sm">Usamos um dispositivo com microagulhas de alta
+                                precisão que penetra apenas 1mm na pele.</p>
                         </div>
-                        <div class="bg-base/40 p-6 rounded-2xl border border-white/5">
-                            <h3 class="font-bold text-highlight mb-4 text-lg">Para quem é indicado?</h3>
-                            <p class="text-gray-400">Homens e mulheres com afinamento, queda intensa ou nos primeiros
-                                estágios da calvície (Alopecia Androgenética).</p>
+                        <div class="bg-base/40 p-6 rounded-2xl border border-white/5 card-hover">
+                            <h4 class="font-bold text-white mb-2">O alvo</h4>
+                            <p class="text-[--text-muted] text-sm">Os medicamentos são depositados diretamente na base
+                                dos folículos que estão enfraquecendo.</p>
+                        </div>
+                        <div class="bg-base/40 p-6 rounded-2xl border border-white/5 card-hover">
+                            <h4 class="font-bold text-white mb-2">Sem dor, sem cortes</h4>
+                            <p class="text-[--text-muted] text-sm">É um tratamento clínico rápido. Você sai do
+                                consultório e segue sua rotina normal no mesmo dia.</p>
                         </div>
                     </div>
 
-                    <p class="text-gray-400 mb-8 italic">
-                        "O MMP age diretamente nutrindo e reativando folículos que ainda têm capacidade produtiva.
-                        Funciona melhor quando iniciado cedo, antes do colapso definitivo."
-                    </p>
+                    <h3 class="text-2xl font-bold text-highlight mb-6 font-display">Para quem é este tratamento?</h3>
+                    <p class="text-gray-300 mb-6">O MMP é ideal para homens e mulheres que estão em diferentes estágios
+                        da perda capilar:</p>
 
-                    <div class="text-center">
+                    <ul class="space-y-4 text-gray-300 mb-12">
+                        <li class="flex items-start">
+                            <span class="text-highlight mr-3 mt-1">●</span>
+                            <span><strong class="text-white">Homens (25 a 40 anos):</strong> Que notam as entradas
+                                aumentando ou o topo da cabeça ficando ralo devido à genética.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-highlight mr-3 mt-1">●</span>
+                            <span><strong class="text-white">Mulheres na Menopausa:</strong> Quando as mudanças
+                                hormonais fazem o cabelo perder volume e densidade rapidamente.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-highlight mr-3 mt-1">●</span>
+                            <span><strong class="text-white">Fios Finos e Fracos:</strong> Para quem percebe que o
+                                cabelo não tem mais a mesma força de antes e cai com facilidade no banho ou no
+                                travesseiro.</span>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold text-highlight mb-6 font-display">Por que o seu cabelo está caindo?
+                    </h3>
+                    <div class="prose prose-lg text-gray-300 max-w-none space-y-6 mb-10">
+                        <p>A causa mais comum é a Alopecia Androgenética. Funciona assim: um hormônio chamado DHT se
+                            fixa nos seus folículos e bloqueia a passagem de nutrientes. É como se ele estivesse
+                            "enforcando" o fio aos poucos até ele sumir.</p>
+                        <p>O MMP age justamente quebrando esse ciclo. Nós levamos os ativos que bloqueiam esse processo
+                            e nutrem a raiz, reativando folículos que ainda têm vida.</p>
+                        <p class="bg-base/40 p-6 rounded-xl border-l-4 border-highlight italic">O segredo é o tempo. O
+                            MMP funciona melhor quando iniciado cedo, antes que o folículo se feche definitivamente. Se
+                            você ainda tem fios, mas eles estão sumindo, esse é o momento de agir.</p>
+                        <p>A Dra. Emille avalia cada caso para criar o "coquetel" de medicamentos personalizado para a
+                            sua necessidade. Vamos salvar o seu cabelo enquanto ele ainda está aí?</p>
+                    </div>
+
+                    <div class="text-center mt-12">
                         <a href="#contato"
-                            class="inline-block text-highlight font-bold border-2 border-highlight px-8 py-3 rounded-lg hover:bg-highlight hover:text-white transition">
+                            class="inline-block text-black bg-highlight font-bold px-10 py-4 rounded-xl hover-highlight transition btn-cta shadow-xl">
                             Agendar minha avaliação agora
                         </a>
                     </div>
@@ -453,16 +675,17 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <!-- 6. Contato -->
-    <section id="contato" class="py-20 bg-base">
+    <section id="contato" class="py-24 bg-base">
         <div class="container mx-auto px-6 max-w-2xl">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 reveal">
                 <h2 class="text-3xl font-bold text-gray-100">Sua avaliação começa aqui.</h2>
                 <p class="text-gray-400 mt-2">Preencha os dados abaixo e nossa equipe entrará em contato em até 24
                     horas.</p>
             </div>
 
-            <form class="space-y-6 bg-secondary p-8 rounded-3xl border border-white/5 shadow-sm">
+            <form class="space-y-6 bg-secondary p-8 md:p-10 rounded-3xl border border-white/5 shadow-xl reveal">
                 <div>
                     <label class="block text-sm font-semibold text-gray-300 mb-1">Nome completo</label>
                     <input type="text"
@@ -532,7 +755,7 @@
                         placeholder="Descreva brevemente seu histórico capilar..."></textarea>
                 </div>
                 <button type="submit"
-                    class="w-full bg-highlight text-white font-bold py-4 rounded-lg hover-highlight transition shadow-lg text-lg">
+                    class="w-full bg-highlight text-black font-bold py-4 rounded-xl btn-cta shadow-lg text-lg">
                     Agendar minha avaliação gratuita
                 </button>
                 <p class="text-center text-xs text-gray-500 mt-4">Sigilo absoluto. Suas informações são utilizadas
@@ -541,10 +764,11 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <!-- 7. FAQ -->
-    <section id="faq" class="py-20 bg-[#141416]">
+    <section id="faq" class="py-24 bg-[#121214]">
         <div class="container mx-auto px-6 max-w-3xl">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 reveal">
                 <h2 class="text-3xl font-bold text-gray-100">Perguntas Frequentes</h2>
                 <p class="text-gray-400 mt-2">Tire suas dúvidas sobre os procedimentos, resultados e técnicas.</p>
             </div>
@@ -609,6 +833,85 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="faq-item bg-secondary rounded-xl shadow-sm border border-white/5 overflow-hidden">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-gray-100 hover:bg-white/5 transition"
+                        onclick="toggleFaq(this)">
+                        <span>O MMP substitui a necessidade de um Transplante Capilar?</span>
+                        <svg class="faq-icon transition-transform text-highlight" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-5 text-gray-400 leading-relaxed">
+                            Depende do seu estágio de calvície. O MMP é focado em salvar e engrossar os fios que você
+                            ainda tem. Se a área já está totalmente lisa e sem folículos ativos, o transplante será o
+                            caminho indicado para recuperar o cabelo naquela região.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-secondary rounded-xl shadow-sm border border-white/5 overflow-hidden">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-gray-100 hover:bg-white/5 transition"
+                        onclick="toggleFaq(this)">
+                        <span>O tratamento serve para mulheres também?</span>
+                        <svg class="faq-icon transition-transform text-highlight" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-5 text-gray-400 leading-relaxed">
+                            Com certeza. Inclusive o MMP é um dos tratamentos mais indicados para mulheres que percebem
+                            o cabelo ficando ralo ou com riscas aparentes devido a questões hormonais ou genética.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-secondary rounded-xl shadow-sm border border-white/5 overflow-hidden">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-gray-100 hover:bg-white/5 transition"
+                        onclick="toggleFaq(this)">
+                        <span>Quantas sessões de MMP eu preciso fazer?</span>
+                        <svg class="faq-icon transition-transform text-highlight" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-5 text-gray-400 leading-relaxed">
+                            Isso depende da avaliação individual da Dra. Emille. Geralmente o protocolo inicial envolve
+                            de 3 a 6 sessões com intervalos mensais. Esse tempo é necessário para respeitarmos o ciclo
+                            natural de crescimento do seu cabelo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-secondary rounded-xl shadow-sm border border-white/5 overflow-hidden">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-gray-100 hover:bg-white/5 transition"
+                        onclick="toggleFaq(this)">
+                        <span>O procedimento do MMP é doloroso?</span>
+                        <svg class="faq-icon transition-transform text-highlight" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="px-6 pb-5 text-gray-400 leading-relaxed">
+                            Não. O MMP utiliza microagulhas extremamente finas e o desconforto é muito baixo. A maioria
+                            dos pacientes relata apenas uma leve sensação de formigamento durante a aplicação e o
+                            procedimento é muito bem tolerado.
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="mt-12 text-center bg-secondary p-8 rounded-3xl text-white border border-white/5">
@@ -624,7 +927,8 @@
     </section>
 
     <!-- 8. Footer -->
-    <footer class="bg-base text-white pt-16 pb-8 border-t border-white/5">
+    <div class="section-divider"></div>
+    <footer class="bg-base text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
@@ -685,6 +989,7 @@
     </footer>
 
     <script>
+        // FAQ accordion
         function toggleFaq(button) {
             const item = button.parentElement;
             const isActive = item.classList.contains('active');
@@ -692,6 +997,29 @@
             if (!isActive) item.classList.add('active');
         }
 
+        // Scroll Reveal (IntersectionObserver)
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // Navbar glassmorphism on scroll
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        }, { passive: true });
+
+        // Form submit handler
         document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault();
             const btn = this.querySelector('button');
@@ -700,6 +1028,7 @@
             setTimeout(() => {
                 btn.innerText = "Solicitação enviada com sucesso!";
                 btn.classList.replace('bg-highlight', 'bg-green-600');
+                btn.classList.add('text-white');
                 this.reset();
             }, 1500);
         });
